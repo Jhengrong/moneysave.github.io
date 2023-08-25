@@ -40,6 +40,23 @@ input[type=submit]:hover {
   display: block;
 }
 
+.spacer {
+  margin-bottom: 15px; /* 設定底邊距大小，創建空行 */
+}
+
+.inline-label {
+  display: inline-block;
+  width: 40px; /* 調整標籤的寬度，以保持一致性 */
+  vertical-align: top; /* 將標籤垂直對齊到頂部 */
+  margin-right: 0px; /* 調整標籤右邊的間距 */
+}
+
+.inline-input {
+  display: inline-block;
+  width: calc(100% - 50px); /* 調整輸入欄的寬度，以保持一致性 */
+  vertical-align: top; /* 將輸入欄垂直對齊到頂部 */
+}
+
 
 </style>
 </head>
@@ -49,13 +66,14 @@ input[type=submit]:hover {
 
 <div class="container">
   <form action="#" method="post" name="msform">
-    <label for="dateInput">日期</label>
-    <input type="date" id="date" name="日期" placeholder="#">
+    <label for="dateInput"class="break-label inline-label">日期</label>
+    <input type="date" id="date" name="日期" placeholder="#" class="break-input inline-input">
 
-    <div class="empty-row"></div> <!-- 插入空行 -->
-    
-    <label for="itom"class='break-label'>類別</label>
-    <select id="itom" name="類別"  class="break-input">
+    <!-- 在這裡添加空行 -->
+    <div class="spacer"></div>
+
+    <label for="itom" class="break-label inline-label">類別</label>
+    <select id="itom" name="類別" class="break-input inline-input">
       <option value="存款息">存款息</option>
       <option value="保險息">保險息</option>
       <option value="基金息">基金息</option>
@@ -65,15 +83,18 @@ input[type=submit]:hover {
       <option value="其它">其它</option>
     </select>
 
-    <label for="acount"class='break-label'>帳戶</label>
-    <select id="acount" name="帳戶"  class="break-input">
+    <label for="acount" class="break-label inline-label">帳戶</label>
+    <select id="acount" name="帳戶" class="break-input inline-input">
       <option value="現金">現金</option>
       <option value="美金">美金</option>
     </select>
 
-    <label for="amount" class="break-label">金額</label>
-    <input type="number" id="amount" name="金額" placeholder="輸入金額" class="break-input">
+    <label for="amount" class="break-label inline-label">金額</label>
+    <input type="number" id="amount" name="金額" placeholder="輸入金額" class="break-input inline-input">
    
+    <!-- 在這裡添加空行 -->
+    <div class="spacer"></div>
+
     <label for="subject">備註</label>
     <textarea id="subject" name="備註" placeholder="Write something.." style="height:200px"></textarea>
 
