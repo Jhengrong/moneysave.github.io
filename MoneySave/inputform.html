@@ -57,6 +57,14 @@ input[type=submit]:hover {
   vertical-align: top; /* 將輸入欄垂直對齊到頂部 */
 }
 
+.spacer-top {
+  margin-top: 20px; /* 調整上邊距大小 */
+}
+
+.spacer-bottom {
+  margin-bottom: 20px; /* 調整下邊距大小 */
+}
+
 
 </style>
 </head>
@@ -68,6 +76,9 @@ input[type=submit]:hover {
   <form action="#" method="post" name="msform">
     <label for="dateInput"class="break-label inline-label">日期</label>
     <input type="date" id="date" name="日期" placeholder="#" class="break-input inline-input">
+    <!-- 在 "日期" 欄位和 "類別" 欄位之間插入上邊距 -->
+    <div class="spacer-top"></div>
+
 
     <!-- 在這裡添加空行 -->
     <div class="spacer"></div>
@@ -88,12 +99,15 @@ input[type=submit]:hover {
       <option value="現金">現金</option>
       <option value="美金">美金</option>
     </select>
+      <!-- 在 "金額" 欄位下方插入下邊距 -->
+      <div class="spacer-bottom"></div>
 
     <label for="amount" class="break-label inline-label">金額</label>
     <input type="number" id="amount" name="金額" placeholder="輸入金額" class="break-input inline-input">
-   
     <!-- 在這裡添加空行 -->
     <div class="spacer"></div>
+    <!-- 在 "金額" 欄位下方插入下邊距 -->
+    <div class="spacer-bottom"></div>
 
     <label for="subject">備註</label>
     <textarea id="subject" name="備註" placeholder="Write something.." style="height:200px"></textarea>
